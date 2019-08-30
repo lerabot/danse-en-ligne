@@ -1,0 +1,11 @@
+{
+  "name": "danse-en-ligne",
+  "vapid": {
+  },
+  "scripts": {
+    "start": "vapid start ."
+  },
+  "dependencies": {
+    "@vapid/cli": "^0.8.5"
+  }
+}

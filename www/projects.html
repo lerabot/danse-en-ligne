@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{vapid label="titre du site"}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="https://centreturbine.org/sites/centreturbine.org/files/favicon_0.ico" type="image/vnd.microsoft.icon">
+  <link href="https://fonts.googleapis.com/css?family=Chewy|Work+Sans:400,800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+  {{#section theme}}
+
+    <style>
+      .header{
+        background-color: {{couleur_theme type=text default=#6e2ed2}};
+
+        color:{{couleur_du_texte type=text default=white}};
+
+    }
+
+      p {
+        color: {{couleur_du_texte type=text default=white}};
+          
+        }
+
+
+      
+
+      .header h1 {
+        color: {{couleur_des_titres type=text default=yellow}};
+
+
+              
+        }
+
+        
+      
+
+      .proj h5 {
+        background-color:{{couleur_theme type=text default=#6e2ed2}};
+              
+          
+        }
+
+        
+      
+
+      .original {
+        border:20px solid {{couleur_theme type=text default=#6e2ed2}};
+
+      }
+
+      .wrapper h4 {
+        background-color: {{couleur_theme type=text default=#6e2ed2}};
+              
+  
+        
+
+        color: {{couleur_des_titres type=text default=yellow}};
+
+      }
+
+      .wrapper h5 {
+        color: {{couleur_du_texte type=text default=white}};
+
+      }
+
+    </style>
+  {{/section}}
+   
+</head>
+
+
+
+<body>
+
+  <header class="header">
+    <h2>Centre Turbine</h2>
+    <h1><span>{{vapid label="Titre" priority=1}}</span></h1>
+
+<div class="options"><a class="login button" href="https://www.vapid.com/dashboard/sections/d3cc5af9-6615-45e2-b97b-b35914ac8320/records/new" target="_blank">Nouveau mouvement</a>
+</div>
+  </header>
+
+  
+  <section>
+    <div class="container">
+
+      <ul class="proj row">
+        {{#section Videos multiple=true sortable=true}} 
+          <div class="wrapper">
+            <li>
+
+              {{#if Nom_du_mouvement}}
+                <h4>{{Nom_du_mouvement required=false}}</h4>
+              {{/if}}
+              {{#if Auteur}}
+                <h5 style="margin-bottom:0;">Par : {{Auteur required=false}}</h5>
+               <ul>
+    <li>
+  </ul>
+              {{/if}}
+
+            </li>
+            <li class="original">
+            
+
+              <img id="0" src="{{video type=image tag=false alt="Responsive" priority=1}}">
+                  <a class="button getUrl" target="_blank" href="https://www.vapid.com/dashboard/records/{{_id}}/edit">répondre</a>
+            </li>
+            {{#if video}}
+              <ul> {{#if video1}}
+                  <li class="answer">
+                    <img id="1" src="{{video1 type=image  tag=false required=false alt="Responsive" priority=2}}"></li>
+                {{/if}}
+                {{#if video2}}
+                  <li class="answer">
+                    <img id="2" src="{{video2 type=image  tag=false required=false alt="Responsive" priority=3}}">
+                  </li>
+                {{/if}}
+                {{#if video3}}
+                  <li class="answer"> <img id="3" src="{{video3 type=image  required=false tag=false alt="Responsive" priority=4}}"></li>
+                {{/if}}
+                {{#if video4}}
+                  <li class="answer"> <img id="4" src="{{video4 type=image  required=false tag=false alt="Responsive" priority=5}}"></li>
+                {{/if}}
+                {{#if video4}}
+
+                  <li class="answer">
+                    <img id="1" src="{{video5 type=image  tag=false required=false alt="Responsive" priority=6}}"></li>
+                {{/if}}
+                {{#if video5}}
+
+                  <li class="answer">
+                    <img id="1" src="{{video6 type=image  tag=false required=false alt="Responsive" priority=7}}"></li>
+                {{/if}}
+                {{#if video6}}
+
+                  <li class="answer">
+                    <img id="1" src="{{video7 type=image  tag=false required=false alt="Responsive" priority=8}}"></li>
+                {{/if}}
+                {{#if video7}}
+
+                  <li class="answer">
+                    <img id="1" src="{{video8 type=image  tag=false required=false alt="Responsive" priority=9}}"></li>
+                {{/if}}
+                {{#if video8}}
+
+                  <li class="answer">
+                    <img id="1" src="{{video9 type=image  tag=false required=false alt="Responsive" priority=10}}"></li>
+                {{/if}}
+                {{#if video9}}
+
+                  <li class="answer">
+                    <img id="1" src="{{video10 type=image  tag=false required=false alt="Responsive" priority=11}}"></li>
+                {{/if}}
+              </ul>
+          </div>
+          {{/if}}
+
+
+
+
+        {{/section}}
+      </ul>
+
+    </div>
+  </section>
+
+  <footer>
+
+  </footer>
+
+  <script src="/javascripts/site.js"></script>
+</body>
+
+</html>
